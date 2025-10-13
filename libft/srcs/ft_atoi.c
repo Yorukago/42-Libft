@@ -3,10 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:36:24 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/13 17:45:33 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/10/13 22:36:05 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_atoi(const char *ptr)
+{
+	int	sum;
+	int	sign;
+
+	sum = 0;
+	sign = 1;
+	while (*ptr == ' ' || (*ptr >= 9 && *ptr <= 13))
+		ptr++;
+	if (*ptr == '+' || *ptr == '-')
+	{
+		if (*ptr == '-')
+			sign *= -1;
+		ptr++;
+	}
+	while (*ptr >= '0' && *ptr <= '9')
+	{
+		sum = (sum * 10) + (*ptr - '0');
+		ptr++;
+	}
+	return (sign * sum);
+}

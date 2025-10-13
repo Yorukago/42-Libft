@@ -6,7 +6,17 @@
 /*   By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:30:32 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/13 17:30:33 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/10/13 17:56:55 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+int	ft_isalnum(unsigned char c)
+{
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') 
+		|| (c >= 0 && c <= 9))
+		return (1);
+	else
+		return (0);
+}

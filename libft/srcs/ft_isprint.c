@@ -6,7 +6,16 @@
 /*   By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:30:54 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/13 17:30:55 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/10/13 17:58:34 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+int	ft_isprint(unsigned char c)
+{
+	if (c >= 32 && c <= 126)
+		return (1);
+	else
+		return (0);
+}

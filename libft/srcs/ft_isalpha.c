@@ -6,7 +6,16 @@
 /*   By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:29:23 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/13 17:29:24 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/10/13 17:52:26 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+int	ft_isalpha(unsigned char c)
+{
+	if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
+		return (1);
+	else
+		return (0);
+}

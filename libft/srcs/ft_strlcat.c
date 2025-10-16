@@ -6,7 +6,13 @@
 /*   By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:34:51 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/13 17:34:52 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/10/16 16:33:37 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
+{
+	
+}

@@ -1,28 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/13 17:35:50 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/16 16:32:00 by jzorreta         ###   ########.fr       */
+/*   Created: 2025/10/13 17:34:51 by jzorreta          #+#    #+#             */
+/*   Updated: 2025/10/22 14:47:53 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	const unsigned char	*a;
-	
-	a = s;
-	while (n > 0)
+	size_t	dst_s;
+	size_t	src_s;
+	size_t	i;
+	size_t	sum;
+
+	i = 0;
+	sum = 0;
+	dst_s = ft_strlen(dst);
+	src_s = ft_strlen(src);
+	if (dst_s < size)
+		sum = src_s + size;
+	else
+		return (dst_s + src_s);
+	while (dst_s + 1 < size && src[i] != '\0')
 	{
-		if (*a == (unsigned char)c)
-			return((void *)a);
-		a++;
-		n--;
+		dst[dst_s] = src[i];
+		dst_s++;
+		i++;
 	}
-	return (NULL);
+	dst[dst_s] = '\0';
+	return (sum);
 }

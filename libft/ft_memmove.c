@@ -1,22 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/13 17:30:32 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/13 22:38:26 by jzorreta         ###   ########.fr       */
+/*   Created: 2025/10/13 17:33:56 by jzorreta          #+#    #+#             */
+/*   Updated: 2025/10/22 14:47:06 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(unsigned char c)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') 
-		|| (c >= 0 && c <= 9))
-		return (1);
+	char		*i;
+	const char	*j;
+
+	if (!dest && !src)
+		return (NULL);
+	i = dest;
+	j = src;
+	if (j < i)
+	{
+		while (n--)
+			*i++ = *j++;
+	}
 	else
-		return (0);
+	{
+		i += n;
+		j += n;
+		while (n--)
+			*i-- = *j--;
+	}
+	return (dest);
 }

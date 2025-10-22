@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/13 17:33:56 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/15 15:42:05 by jzorreta         ###   ########.fr       */
+/*   Created: 2025/10/13 17:35:50 by jzorreta          #+#    #+#             */
+/*   Updated: 2025/10/22 14:48:55 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char	*i;
-	const char	*j;
+	const unsigned char	*a;
 
-	if (!dest && !src)
-		return (NULL);
-	i = dest;
-	j = src;
-	if (j < i)
+	a = s;
+	while (n > 0)
 	{
-		while (n--)
-			*i++ = *j++;
+		if (*a == (unsigned char)c)
+			return ((void *)a);
+		a++;
+		n--;
 	}
-	else
-	{
-		i += n;
-		j += n;
-		while (n--)
-			*i-- = *j--;
-	}
-	return (dest);
+	return (NULL);
 }

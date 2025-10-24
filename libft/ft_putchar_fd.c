@@ -6,7 +6,11 @@
 /*   By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:05:40 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/22 15:05:41 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/10/24 11:30:24 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+void	ft_putchar_fd(char c, int fd)
+{
+	write (fd, &c, 1);
+}

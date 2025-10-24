@@ -6,7 +6,13 @@
 /*   By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:05:31 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/22 15:05:32 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/10/24 14:04:47 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+t_list	*ft_lstlast(t_list *lst)
+{
+	
+}

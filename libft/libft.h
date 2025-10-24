@@ -6,7 +6,7 @@
 /*   By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:28:21 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/22 15:05:02 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/10/24 11:45:46 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ typedef struct	s_list
 {
 	void 			*content;
 	struct s_list 	*next;
-}					t_list;
+}	t_list;
 
 //first part
 void	ft_bzero(void *s, size_t n);

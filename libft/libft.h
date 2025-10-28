@@ -6,7 +6,7 @@
 /*   By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:28:21 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/24 11:45:46 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/10/28 15:16:11 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 # include <string.h>
 # include <stdio.h>
 
-typedef struct	s_list
+typedef struct s_list
 {
-	void 			*content;
-	struct s_list 	*next;
+	void			*content;
+	struct s_list	*next;
 }	t_list;
 
 //first part

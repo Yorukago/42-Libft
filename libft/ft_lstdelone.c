@@ -6,7 +6,13 @@
 /*   By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:05:26 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/22 15:05:27 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/10/28 12:16:22 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void ft_lstdelone(t_list *lst, void (*del)(void *))
+{
+	
+}

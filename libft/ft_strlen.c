@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:31:25 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/22 14:48:07 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/10/29 23:12:32 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,3 +21,9 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
+// int	main(void)
+// {
+// 	printf("Size: %zu\n", ft_strlen("Hello!"));
+// 	printf("Sizeof: %zu\n", sizeof(size_t));
+// 	return (0);
+// }

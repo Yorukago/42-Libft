@@ -6,7 +6,7 @@
 /*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:35:02 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/13 21:23:13 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/10/29 22:53:36 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,8 @@ int	ft_toupper(int c)
 	else
 		return (c);
 }
+// int	main(void)
+// {
+// 	printf("Should be uppercase: %i", ft_toupper('a'));
+// 	return (0);
+// }

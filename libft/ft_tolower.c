@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:35:12 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/14 11:10:41 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/10/29 22:53:58 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,8 @@ int	ft_tolower(int c)
 	else
 		return (c);
 }
+// int	main(void)
+// {
+// 	printf("Should be lowercase: %i", ft_tolower('A'));
+// 	return (0);
+// }

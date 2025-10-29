@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+         #
+#    By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/16 16:06:39 by jzorreta          #+#    #+#              #
-#    Updated: 2025/10/28 11:57:07 by jzorreta         ###   ########.fr        #
+#    Updated: 2025/10/29 23:29:57 by jzorreta         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,23 +35,29 @@ RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
 INCLUDE = -I .
 
-.o:.c
-		${CC} ${CFLAGS} ${INCLUDE} -c $< -o ${<:.c=.o}
+%.o: %.c
+	@${CC} ${CFLAGS} ${INCLUDE} -c $< -o $@
+	@echo "Compiling $< ... done!"
 
-$(NAME): ${OBJS}
-		ar rcs ${NAME} ${OBJS}
+${NAME}: ${OBJS}
+	@ar rcs ${NAME} ${OBJS}
+	@echo "libft has appeared!"
 
-all:	${NAME}
+all: ${NAME}
 
-bonus:	${OBJS} ${BONUS_OBJS}
-		ar rcs ${NAME} ${OBJS} ${BONUS_OBJS}
+bonus: ${OBJS} ${BONUS_OBJS}
+	@ar rcs ${NAME} ${OBJS} ${BONUS_OBJS}
+	@echo "Bonus features unlocked!"
 
 clean:
-		${RM} ${OBJS} ${BONUS_OBJS}
+	@${RM} ${OBJS} ${BONUS_OBJS}
+	@echo "cleaning complete! (your workspace sparkles now)"
 
 fclean: clean
-		${RM} ${NAME}
+	@${RM} ${NAME}
+	@echo "libft.a yeeted into the void."
 
 re: fclean all
+	@echo "full rebuild complete. fresh and clean!"
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus

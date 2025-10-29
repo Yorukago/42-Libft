@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:05:21 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/28 12:04:16 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/10/29 00:41:26 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,33 +3,42 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:36:09 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/22 14:48:16 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/10/30 00:07:32 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
 
 	i = 0;
 	if (little[0] == '\0')
-		return (big);
+		return ((char *)big);
 	while (big[i] != '\0' && i < len)
 	{
 		j = 0;
-		while (big[i + j] != '\0' && big[i + j] == little[j] && i + j < len)
+		while (i + j < len && little[j])
 		{
-			if (little[j + 1] == '\0')
-				return (&big[i]);
-			++j;
+			if (little[j] != big[i + j])
+				break ;
+			j++;
 		}
-		++i;
+		if (big[j] == '\0')
+			return ((char *)&big[i]);
+		i++;
 	}
-	return (NULL);
+	return (0);
 }
+// int	main(void)
+// {
+// 	char *s1 = "meow";
+// 	char *s2 = "me";
+// 	printf("Found: %s\n", ft_strnstr(s1, s2, sizeof(s1)));
+// 	return (0);
+// }

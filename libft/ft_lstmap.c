@@ -6,7 +6,7 @@
 /*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:05:33 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/29 00:41:05 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/10/30 00:08:49 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			ft_lstclear(&new_list, del);
 			return (NULL);
 		}
-		ft_lstaddback(&new_list, new_node);
+		ft_lstadd_back(&new_list, new_node);
 		lst = lst->next;
 	}
 	return (new_list);

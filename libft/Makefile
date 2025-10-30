@@ -6,11 +6,12 @@
 #    By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/16 16:06:39 by jzorreta          #+#    #+#              #
-#    Updated: 2025/10/29 23:29:57 by jzorreta         ###   ########.fr        #
+#    Updated: 2025/10/30 00:34:17 by jzorreta         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+BONUS_NAME = libft_bonus.a
 
 PART1 = ft_tolower.c ft_toupper.c ft_isprint.c ft_isascii.c ft_isalnum.c \
 		ft_isdigit.c ft_isalpha.c ft_atoi.c ft_strlen.c ft_strlcat.c \
@@ -26,7 +27,6 @@ BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstadd_back.c ft_lstdelone.c ft_lstclea
 		ft_lstiter.c ft_lstmap.c ft_lstsize.c ft_lstlast.c
 
 SRC = ${PART1} ${PART2}
-
 OBJS = ${SRC:.c=.o}
 BONUS_OBJS = ${BONUS:.c=.o}
 
@@ -36,28 +36,29 @@ CFLAGS = -Wall -Wextra -Werror
 INCLUDE = -I .
 
 %.o: %.c
-	@${CC} ${CFLAGS} ${INCLUDE} -c $< -o $@
-	@echo "Compiling $< ... done!"
+	@${CC} ${CFLAGS} ${INCLUDE} -c $< -o $@ >/dev/null 2>&1
 
 ${NAME}: ${OBJS}
-	@ar rcs ${NAME} ${OBJS}
+	@ar rcs ${NAME} ${OBJS} >/dev/null 2>&1
 	@echo "libft has appeared!"
 
 all: ${NAME}
 
-bonus: ${OBJS} ${BONUS_OBJS}
-	@ar rcs ${NAME} ${OBJS} ${BONUS_OBJS}
+${BONUS_NAME}: ${OBJS} ${BONUS_OBJS}
+	@ar rcs ${BONUS_NAME} ${OBJS} ${BONUS_OBJS} >/dev/null 2>&1
 	@echo "Bonus features unlocked!"
+
+bonus: ${BONUS_NAME}
 
 clean:
 	@${RM} ${OBJS} ${BONUS_OBJS}
-	@echo "cleaning complete! (your workspace sparkles now)"
+	@echo "Cleaning complete!"
 
 fclean: clean
-	@${RM} ${NAME}
-	@echo "libft.a yeeted into the void."
+	@${RM} ${NAME} ${BONUS_NAME}
+	@echo "All libraries removed!"
 
 re: fclean all
-	@echo "full rebuild complete. fresh and clean!"
+	@echo "Full rebuild complete!"
 
 .PHONY: all clean fclean re bonus

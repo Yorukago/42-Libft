@@ -6,7 +6,7 @@
 /*   By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:33:56 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/22 14:47:06 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/11/04 15:01:59 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	char		*i;
 	const char	*j;
 
-	if (!dest && !src)
-		return (NULL);
 	i = dest;
 	j = src;
 	if (j < i)

@@ -6,7 +6,7 @@
 /*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:05:59 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/11/03 23:52:01 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/11/05 00:09:11 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trim;
 	size_t	i;
-	size_t	len;
+	size_t	end;
 	size_t	start;
 
 	if (!s1 || !set)
@@ -35,14 +35,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 	start = 0;
 	while (s1[start] && is_set(s1[start], set))
 		start++;
-	len = ft_strlen(s1);
-	while (len > start && is_set(s1[len - 1], set))
-		len--;
-	trim = ft_calloc(len + 1, sizeof(char));
+	end = ft_strlen(s1);
+	while (end > start && is_set(s1[end - 1], set))
+		end--;
+	trim = (char *)malloc(sizeof(char) * (end - start + 1));
 	if (!trim)
 		return (NULL);
 	i = 0;
-	while (i < len)
+	while (start < end)
 		trim[i++] = s1[start++];
 	trim[i] = '\0';
 	return (trim);

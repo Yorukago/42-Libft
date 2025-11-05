@@ -6,7 +6,7 @@
 /*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:05:33 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/30 00:08:49 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/11/05 00:18:22 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_list;
 	t_list	*new_node;
-	
+
 	if (!lst || !f)
 		return (NULL);
 	new_list = NULL;

@@ -6,7 +6,7 @@
 /*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:05:57 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/11/04 22:44:10 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/11/04 23:37:07 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		result[i] = f(i, s[i]);
 		i++;
 	}
-	result = '\0';
+	result[i] = '\0';
 	return (result);
 }

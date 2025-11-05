@@ -6,7 +6,7 @@
 /*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:05:45 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/29 23:22:37 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/11/05 00:13:57 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,17 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long int	i;
+	long	num;
 
-	i = n;
-	if (i < 0)
+	num = n;
+	if (num < 0)
 	{
-		n *= -n;
 		ft_putchar_fd('-', fd);
+		num = -num;
 	}
-	if (n >= 0 && n <= 9)
-	{
-		ft_putchar_fd(n + '0', fd);
-	}
-	if (n > 9)
-	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putnbr_fd(n % 10, fd);
-	}
+	if (num >= 10)
+		ft_putnbr_fd(num / 10, fd);
+	ft_putchar_fd((num % 10) + '0', fd);
 }
 // int	main(void)
 // {

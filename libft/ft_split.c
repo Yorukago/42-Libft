@@ -6,54 +6,58 @@
 /*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:05:50 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/11/05 00:01:53 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/11/05 10:15:36 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include "libft.h"
-
-static int	count_words(char const *s, char c)
+static int	ft_count_words(const char *s, char c)
 {
-	int	count;
-	int	in_word;
+	int	i;
+	int	words;
 
-	count = 0;
-	in_word = 0;
-	while (*s)
+	i = 0;
+	words = 0;
+	while (s[i])
 	{
-		if (*s != c && !in_word)
+		if (s[i] != c)
 		{
-			in_word = 1;
-			count++;
+			words++;
+			while (s[i] && s[i] != c)
+				i++;
 		}
-		else if (*s == c)
-			in_word = 0;
-		s++;
+		else
+			i++;
 	}
-	return (count);
+	return (words);
 }
 
-static void	free_memory(char **arr, int j)
+static void	mem_free(char **words, int j)
 {
-	while (j--)
-		free(arr[j]);
-	free(arr);
+	j--;
+	while (j >= 0)
+	{
+		free(words[j]);
+		j--;
+	}
+	free(words);
 }
 
-static char	*splitter(char const *s, char c)
+static char	*word_splitter(const char *s, char c, char **words, int j)
 {
 	char	*word;
-	int		len;
 	int		i;
 
-	len = 0;
-	while (s[len] && s[len] != c)
-		len++;
-	word = (char *)malloc(sizeof(char) * (len + 1));
+	i = 0;
+	while (s[i] && s[i] != c)
+		i++;
+	word = (char *) malloc(sizeof(char) * (i + 1));
 	if (!word)
+	{
+		mem_free(words, j);
 		return (NULL);
+	}
 	i = 0;
 	while (s[i] && s[i] != c)
 	{
@@ -66,31 +70,29 @@ static char	*splitter(char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	char	**split;
 	int		i;
 	int		j;
+	char	**words;
 
-	if (!s)
-		return (NULL);
-	if (!(split = malloc(sizeof(char *) * (count_words(s, c) + 1))))
-		return (NULL);
 	i = 0;
 	j = 0;
+	words = (char **)malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
+	if (!words || !s)
+		return (NULL);
 	while (s[i])
 	{
-		while (s[i] == c)
-			i++;
-		if (s[i])
+		if (s[i] != c)
 		{
-			if (!(split[j] = splitter(&s[i], c)))
-				return (free_memory(split, j), NULL);
-			while (s[i] && s[i++] != c)
-				;
+			words[j] = word_splitter(&s[i], c, words, j);
+			if (!words[j])
+				return (NULL);
+			while (s[i] && s[i] != c)
+				i++;
 			j++;
 		}
+		else
+			i++;
 	}
-	return (split[j] = NULL, split);
+	words[j] = 0;
+	return (words);
 }
-
-
-

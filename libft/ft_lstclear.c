@@ -6,7 +6,7 @@
 /*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:05:24 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/29 00:41:22 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/11/05 10:02:06 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list *next;
-	t_list *current;
+	t_list	*next;
+	t_list	*current;
 
 	if (lst && del)
 	{

@@ -6,7 +6,7 @@
 /*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:06:01 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/11/04 23:17:40 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/11/05 10:05:51 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *sub;
-	size_t i;
+	char	*sub;
+	size_t	i;
 
 	if (!s)
 		return (NULL);
@@ -24,8 +24,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (len > ft_strlen(s + start))
 		len = ft_strlen(s + start);
 	sub = ft_calloc(len + 1, sizeof(char));
-		if (!sub)
-			return (NULL);
+	if (!sub)
+		return (NULL);
 	i = 0;
 	while (i < len)
 	{

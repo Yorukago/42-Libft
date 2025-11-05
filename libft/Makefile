@@ -6,7 +6,7 @@
 #    By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/16 16:06:39 by jzorreta          #+#    #+#              #
-#    Updated: 2025/10/30 00:34:17 by jzorreta         ###   ########.fr        #
+#    Updated: 2025/11/05 00:58:35 by jzorreta         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,11 +44,9 @@ ${NAME}: ${OBJS}
 
 all: ${NAME}
 
-${BONUS_NAME}: ${OBJS} ${BONUS_OBJS}
-	@ar rcs ${BONUS_NAME} ${OBJS} ${BONUS_OBJS} >/dev/null 2>&1
+bonus: ${OBJS} ${BONUS_OBJS}
+	@ar rcs ${NAME} ${OBJS} ${BONUS_OBJS} >/dev/null 2>&1
 	@echo "Bonus features unlocked!"
-
-bonus: ${BONUS_NAME}
 
 clean:
 	@${RM} ${OBJS} ${BONUS_OBJS}

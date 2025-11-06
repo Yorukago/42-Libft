@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:36:09 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/11/06 11:46:53 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/11/06 15:46:38 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 }
 // int	main(void)
 // {
-// 	char *s1 = "meow";
+// 	char *s1 = "ballzw";
 // 	char *s2 = "me";
 // 	printf("Found: %s\n", ft_strnstr(s1, s2, sizeof(s1)));
 // 	return (0);

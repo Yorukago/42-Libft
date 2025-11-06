@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:05:59 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/11/06 11:46:46 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/11/06 15:51:50 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 }
 // int main(void)
 // {
-// 	char *s1 = "bwabwa123bwabwa";
-// 	char *set = "bwa";
-// 	printf("%s\n", ft_strtrim(s1, set));
+// 	char *s1 = NULL;
+// 	char *set = NULL;
+// 	char *trim = ft_strtrim(s1, set);
+// 	if (!trim)
+// 		dprintf(2, "malloc failed :(\n");
+// 	else
+// 	{
+// 		printf("%s\n", trim);
+// 		free (trim);
+// 	}
 // 	return (0);
 // }

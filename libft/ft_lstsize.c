@@ -6,7 +6,7 @@
 /*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:05:38 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/11/06 14:37:47 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/11/06 15:47:06 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,3 @@ int	ft_lstsize(t_list *lst)
 
 // 	return (0);
 // }
-

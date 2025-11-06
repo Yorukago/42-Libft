@@ -6,7 +6,7 @@
 #    By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/16 16:06:39 by jzorreta          #+#    #+#              #
-#    Updated: 2025/11/05 00:58:35 by jzorreta         ###   ########.fr        #
+#    Updated: 2025/11/06 16:01:37 by jzorreta         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,11 +46,14 @@ all: ${NAME}
 
 bonus: ${OBJS} ${BONUS_OBJS}
 	@ar rcs ${NAME} ${OBJS} ${BONUS_OBJS} >/dev/null 2>&1
+	@touch bonus
 	@echo "Bonus features unlocked!"
 
 clean:
 	@${RM} ${OBJS} ${BONUS_OBJS}
 	@echo "Cleaning complete!"
+	@touch bonus
+	@rm bonus
 
 fclean: clean
 	@${RM} ${NAME} ${BONUS_NAME}
@@ -59,4 +62,4 @@ fclean: clean
 re: fclean all
 	@echo "Full rebuild complete!"
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re

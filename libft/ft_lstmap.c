@@ -6,7 +6,7 @@
 /*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:05:33 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/11/05 00:50:56 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/11/06 15:45:52 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,32 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new_list);
 }
+// int	main(void)
+// {
+// 	t_list *a = ft_lstnew(ft_strdup("croissant"));
+// 	t_list *b = ft_lstnew(ft_strdup("baguette"));
+// 	t_list *c = ft_lstnew(ft_strdup("brioche"));
+// 	a->next = b;
+// 	b->next = c;
+
+// 	printf("Original list:\n");
+// 	for (t_list *tmp = a; tmp; tmp = tmp->next)
+// 		printf("%s\n", (char *)tmp->content);
+// 	t_list *upper_list = ft_lstmap(a, (void *(*)(void *))ft_strdup, free);
+// 	for (t_list *tmp = upper_list; tmp; tmp = tmp->next)
+// 	{
+// 		char *s = (char *)tmp->content;
+// 		while (*s)
+// 		{
+// 			*s = (char)ft_toupper((unsigned char)*s);
+// 			s++;
+// 		}
+// 	}
+// 	printf("\nMapped list:\n");
+// 	for (t_list *tmp = upper_list; tmp; tmp = tmp->next)
+// 		printf("%s\n", (char *)tmp->content);
+
+// 	ft_lstclear(&a, free);
+// 	ft_lstclear(&upper_list, free);
+// 	return (0);
+// }

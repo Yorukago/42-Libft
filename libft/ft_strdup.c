@@ -6,7 +6,7 @@
 /*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:03:17 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/11/06 12:47:33 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/11/06 15:36:57 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_strdup(char *src)
 // 	char *dest = ft_strdup(src);
 
 // 	if (!dest)
-// 		printf("allocation didnt work :(\n");
+// 		dprintf(2, "allocation didnt work :(\n");
 // 	else
 // 		printf("duplicated string: \"%s\"\n", dest);
 // 	free(dest);

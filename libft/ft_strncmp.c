@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:35:43 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/11/06 11:46:50 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/11/06 15:46:46 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 // int	main(void)
 // {
 // 	char *s1 = "waaaaan";
-// 	char *s2 = "waaaat";
-// 	printf("Difference: %i", ft_strncmp(s1, s2, 4));
+// 	char *s2 = "waaaaat";
+// 	printf("difference: %i\n", ft_strncmp(s1, s2, 8));
 // 	return (0);
 // }

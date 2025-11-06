@@ -6,7 +6,7 @@
 /*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:06:01 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/11/05 10:05:51 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/11/06 13:03:08 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,31 +34,19 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	return (sub);
 }
-
-// int main(void)
+// int	main(void)
 // {
-// 	const char *str = "Hello, world!";
-// 	char *sub;
+// 	const char	*str = "Hello world...yeah idk what else to say";
+// 	char		*sub;
 
-// 	// basic test
-// 	sub = ft_substr(str, 7, 5);
-// 	printf("Result 1: \"%s\"\n", sub);
-// 	free(sub);
-
-// 	// start beyond string length
-// 	sub = ft_substr(str, 50, 5);
-// 	printf("Result 2: \"%s\"\n", sub);
-// 	free(sub);
-
-// 	// len longer than remaining string
-// 	sub = ft_substr(str, 4, 50);
-// 	printf("Result 3: \"%s\"\n", sub);
-// 	free(sub);
-
-// 	// start at 0
-// 	sub = ft_substr(str, 0, 5);
-// 	printf("Result 4: \"%s\"\n", sub);
-// 	free(sub);
-
+// 	sub = ft_substr(str, 6, 7);
+// 	if (!sub)
+// 		dprintf(2, "malloc failed :(\n");
+// 	else
+// 	{
+// 		printf("Original: \"%s\"\n", str);
+// 		printf("Substring: \"%s\"\n", sub);
+// 		free(sub);
+// 	}
 // 	return (0);
 // }

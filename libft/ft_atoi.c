@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:36:24 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/29 22:41:39 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/11/06 11:34:03 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	ft_atoi(const char *ptr)
 }
 // int	main(void)
 // {
-// 	char *s = "-1234";
+// 	char *s = "1234";
 // 	printf("Number inputed: %d\n", ft_atoi(s));
 // 	return (0);
 // }

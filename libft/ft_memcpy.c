@@ -6,7 +6,7 @@
 /*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:32:05 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/29 23:57:48 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/11/06 12:45:24 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,12 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 }
 // int	main(void)
 // {
-// 	char *src = "Hello";
-// 	char dest[20];
-// 	printf("Copied: %s\n", (char *)ft_memcpy(dest, src, 5));
+// 	char *src = "Hello thingy!! i hate myself!!!";
+// 	char *dest;
+// 	size_t n;
+//
+// 	n = ft_strlen(src);
+// 	dest = malloc(sizeof(char) * ft_strlen(src));
+// 	printf("Copied: %s\n", (char *)ft_memcpy(dest, src, n));
 // 	return (0);
 // }

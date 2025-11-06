@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:05:50 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/11/05 10:15:36 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/11/06 12:41:32 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,3 +96,31 @@ char	**ft_split(char const *s, char c)
 	words[j] = 0;
 	return (words);
 }
+// int	main(void)
+// {
+// 	const char *str = "i hate myself and i should Keep Myself Safe";
+//     char c = ' ';
+//     char **words;
+//     int i;
+//
+//     words = ft_split(str, c);
+//     if (!words)
+//     {
+//         dprintf(2, "i couldnt do it :(\n");
+//         return (1);
+//     }
+//     i = 0;
+//     while (words[i])
+//     {
+//         printf("word[%d] = \"%s\"\n", i, words[i]);
+//         i++;
+//     }
+//     i = 0;
+//     while (words[i])
+//     {
+//         free(words[i]);
+//         i++;
+//     }
+//     free(words);
+//     return (0);
+// }

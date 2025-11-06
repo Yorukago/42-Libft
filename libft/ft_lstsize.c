@@ -6,7 +6,7 @@
 /*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:05:38 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/29 00:41:36 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/11/06 14:37:47 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,24 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (count);
 }
+// int	main(void)
+// {
+
+// 	t_list *a = ft_lstnew("croissant");
+// 	t_list *b = ft_lstnew("baguette");
+// 	t_list *c = ft_lstnew("brioche");
+
+// 	a->next = b;
+// 	b->next = c;
+
+// 	int size = ft_lstsize(a);
+
+// 	printf("list size: %d\n", size);
+
+// 	free(a);
+// 	free(b);
+// 	free(c);
+
+// 	return (0);
+// }
+

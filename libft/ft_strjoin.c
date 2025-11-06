@@ -6,7 +6,7 @@
 /*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:05:53 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/28 22:38:54 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/11/06 14:24:43 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,3 +39,13 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	return (str);
 }
+// int	main(void){
+// 	char const *s1 = "Yay!! ";
+// 	char const *s2 = "(add something here)";
+// 	char *dest;
+
+// 	dest = ft_strjoin(s1, s2);
+// 	printf("combined string: %s\n", dest);
+// 	free(dest);
+// 	return (0);
+// }

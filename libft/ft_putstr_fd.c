@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:05:48 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/29 23:23:02 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/11/06 12:36:54 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_putstr_fd(char *s, int fd)
 // 	fd = open("wtf", O_RDWR | O_CREAT, 0644);
 // 	if (fd == -1)
 // 		return (1); 
-// 	ft_putstr_fd('what', fd);
+// 	ft_putstr_fd("what", fd);
 // 	close(fd);
 // 	return (0);
 // }

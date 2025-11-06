@@ -6,7 +6,7 @@
 /*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:34:51 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/11/04 23:23:28 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/11/06 14:24:36 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dst_s + i] = '\0';
 	return (dst_s + src_s);
 }
+// int	main(void)
+// {
+// 	char buffer[20] = "Hello";
+// 	const char *to_add = " World!";
+// 	size_t result;
+
+// 	result = ft_strlcat(buffer, to_add, sizeof(buffer));
+// 	printf("final result: \"%s\"\n", buffer);
+// 	printf("supposed size: %zu\n", result);
+// 	return (0);
+// }

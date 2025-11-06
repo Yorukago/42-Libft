@@ -6,7 +6,7 @@
 /*   By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:03:52 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/22 14:48:43 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/11/06 12:09:04 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,3 +22,17 @@ void	*ft_calloc(size_t num, size_t size)
 	ft_memset(v, 0, num * size);
 	return (v);
 }
+// int	main(void)
+// {
+// 	size_t num = 5;
+// 	size_t size = sizeof(int);
+// 	int *arr;
+// 	arr = ft_calloc(num, size);
+// 	if (!arr)
+// 		return (1);
+// 	for (size_t i = 0; i < num; i++)
+//     	printf("%d ", arr[i]);
+// 	printf("\n");
+// 	free(arr);
+// 	return (0);
+// }

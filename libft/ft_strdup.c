@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:03:17 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/10/14 14:03:33 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/11/06 12:47:33 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,15 @@ char	*ft_strdup(char *src)
 	dest[i] = '\0';
 	return (dest);
 }
+// int	main(void)
+// {
+// 	char *src = "heyaaa (with intention to kms)";
+// 	char *dest = ft_strdup(src);
+
+// 	if (!dest)
+// 		printf("allocation didnt work :(\n");
+// 	else
+// 		printf("duplicated string: \"%s\"\n", dest);
+// 	free(dest);
+// 	return (0);
+// }

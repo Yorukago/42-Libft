@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jzorreta <jzorreta@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:03:52 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/11/06 12:09:04 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/11/07 12:33:03 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@ void	*ft_calloc(size_t num, size_t size)
 {
 	void	*v;
 
+	if (!num || !size)
+		return (NULL);
+	if (num * size > INT_MAX)
+		return (NULL);
 	v = malloc(num * size);
 	if (!v)
 		return (NULL);

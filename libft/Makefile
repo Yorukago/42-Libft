@@ -6,12 +6,11 @@
 #    By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/16 16:06:39 by jzorreta          #+#    #+#              #
-#    Updated: 2025/11/06 16:01:37 by jzorreta         ###   ########.fr        #
+#    Updated: 2025/11/07 12:19:42 by jzorreta         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-BONUS_NAME = libft_bonus.a
 
 PART1 = ft_tolower.c ft_toupper.c ft_isprint.c ft_isascii.c ft_isalnum.c \
 		ft_isdigit.c ft_isalpha.c ft_atoi.c ft_strlen.c ft_strlcat.c \
@@ -46,13 +45,13 @@ all: ${NAME}
 
 bonus: ${OBJS} ${BONUS_OBJS}
 	@ar rcs ${NAME} ${OBJS} ${BONUS_OBJS} >/dev/null 2>&1
-	@touch bonus
+	@touch .bonus
 	@echo "Bonus features unlocked!"
 
 clean:
 	@${RM} ${OBJS} ${BONUS_OBJS}
 	@echo "Cleaning complete!"
-	@touch bonus
+	@touch .bonus
 	@rm bonus
 
 fclean: clean

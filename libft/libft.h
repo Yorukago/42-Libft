@@ -6,7 +6,7 @@
 /*   By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:28:21 by jzorreta          #+#    #+#             */
-/*   Updated: 2025/11/04 23:29:44 by jzorreta         ###   ########.fr       */
+/*   Updated: 2025/11/07 12:32:16 by jzorreta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <string.h>
 # include <stdio.h>
 # include <fcntl.h>
+# include <limits.h>
 
 typedef struct s_list
 {

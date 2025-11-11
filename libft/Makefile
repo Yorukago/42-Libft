@@ -6,7 +6,7 @@
 #    By: jzorreta <jzorreta@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/16 16:06:39 by jzorreta          #+#    #+#              #
-#    Updated: 2025/11/07 12:19:42 by jzorreta         ###   ########.fr        #
+#    Updated: 2025/11/07 14:51:18 by jzorreta         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,7 @@ clean:
 	@${RM} ${OBJS} ${BONUS_OBJS}
 	@echo "Cleaning complete!"
 	@touch .bonus
-	@rm bonus
+	@rm .bonus
 
 fclean: clean
 	@${RM} ${NAME} ${BONUS_NAME}

@@ -3,7 +3,6 @@
 > “Sometimes you just need to rebuild the wheel… but make it ~C~ (from now on ill be referencing this as PAINFT).” 
 > — did i even say that?
 
----
 
 ## What is Libft?
 
@@ -39,14 +38,3 @@ All the malloc ~magic~ (pain)
 Because why not suffer just a *little* more
 - `ft_lstnew`, `ft_lstadd_front`, `ft_lstadd_back`, `ft_lstsize`, `ft_lstlast`
 - `ft_lstdelone`, `ft_lstclear`, `ft_lstiter`, `ft_lstmap`
-
----
-
-## Why it matters
-Libft is the foundation of almost every 42 project that comes after, it teaches you:
-
- - how memory allocation actually works
- - what pointers really do
- - and how to write clean, reusable code from scratch
-
-It’s painful at first (trust me, I cried), but once you finish it... you kinda feel like a madman

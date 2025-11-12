@@ -7,7 +7,9 @@
 ## What is Libft?
 
 Libft is the very first project at **42**, where... basically you reinvent a bunch of standard C library functions... from scratch! yay!! (sarcasm)
+
 It’s a custom library of little tools that helps understand **how the C standard library actually works** under the hood.  
+
 (And yes, ill totally use this library in later 42 projects (not))
 
 ---

@@ -1,7 +1,7 @@
-# Libft — My First Library @ 42
+# Libft - My First Library @ 42
 
 > “Sometimes you just need to rebuild the wheel… but make it ~C~ (from now on ill be referencing this as PAINFT).” 
-> — did i even say that?
+> - did i even say that?
 
 
 ## What is Libft?
